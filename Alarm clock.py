@@ -54,7 +54,7 @@ def wait_for_alarm(alarm_time):
                 int(window.winfo_screenheight() / 2 - 60)  # Center the window vertically
             ))
             popup_window.resizable(False, False)
-            message_label = tk.Label(popup_window, text="Wake up!", font=("Arial", 24), fg="black",background="sky blue")
+            message_label = tk.Label(popup_window, text="Wake up!", font=("Arial", 24))
             message_label.pack(fill="both", padx=20, pady=20)
 
             break
@@ -125,9 +125,9 @@ window.geometry("500x500+{}+{}".format(
 window.resizable(False, False)
 
 # Create the digital clock
-clock_frame = tk.Frame(window, bg="blue", width=440, height=220)
+clock_frame = tk.Frame(window, bg="sky blue", width=440, height=220)
 clock_frame.pack(pady=20)
-clock_label = tk.Label(clock_frame, font=("DS-Digital", 80), fg="black", bg="blue")
+clock_label = tk.Label(clock_frame, font=("DS-Digital", 80), fg="black", bg="sky blue")
 clock_label.place(relx=0.5, rely=0.5, anchor="center")
 
 update_clock()
@@ -154,7 +154,7 @@ stop_button = tk.Button(window, text="Stop", font=("Arial", 16), command=stop_al
 stop_button.pack(side="right", padx=20)
 
 # Create the countdown label
-countdown_frame = tk.Frame(window)
+countdown_frame = tk.Frame(window, bg="sky blue", width=440, height=220)
 countdown_frame.pack(pady=20)
 tk.Label(countdown_frame, textvariable=countdown_var, font=("Arial", 16)).pack()
 
